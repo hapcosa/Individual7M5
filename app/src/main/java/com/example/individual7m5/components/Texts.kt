@@ -8,18 +8,21 @@ import androidx.compose.ui.text.font.FontStyle
 
 
 import androidx.compose.ui.unit.sp
+import com.example.individual7m5.ui.theme.green
 import org.intellij.lang.annotations.JdkConstants
 
 @Composable
 fun TextName(){
     Text(text = "Hernan Paredes",
         fontSize = 35.sp,
-    fontStyle = FontStyle.Italic)
+    fontStyle = FontStyle.Italic,
+        color = green)
 }
 @Composable
 fun TextoUno(){
         Text(
             text="Bienvenido",
-            fontSize = 30.sp
+            fontSize = 30.sp,
+            color = green
         )
 }

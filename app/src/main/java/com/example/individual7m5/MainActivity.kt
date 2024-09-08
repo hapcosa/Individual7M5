@@ -26,7 +26,8 @@ import androidx.compose.ui.unit.dp
 import com.example.individual7m5.components.TextName
 import com.example.individual7m5.components.TextoUno
 import com.example.individual7m5.components.botonImageText
-import com.example.individual7m5.components.showImage
+import com.example.individual7m5.components.showImages
+
 import com.example.individual7m5.ui.theme.Individual7M5Theme
 
 class MainActivity : ComponentActivity() {
@@ -35,13 +36,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
 
-            val darkMode = remember {
-                mutableStateOf(false)
-            }
             Individual7M5Theme(
-                darkTheme = darkMode.value
             ) {
-                Content(darkMode=darkMode)
+                Content()
 
             }
 
@@ -51,12 +48,12 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun Content(darkMode: MutableState<Boolean>) {
+fun Content() {
     val visible = remember { mutableStateOf(true)
 
     }
     Box(modifier=Modifier.fillMaxSize()) {
-        showImage(visible)
+        showImages(visible)
     }
     Column(
         modifier = Modifier
